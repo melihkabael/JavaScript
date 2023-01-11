@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <button id="eksi"onclick=cikar()>-</button>
+        <span  id="countertext" style="color:green ;">5</span>
+        <button id="arti"onclick=ekle()>+</button>
+  
+
+    <script>
+      
+        var countertext=document.getElementById("countertext");
+        var value;
+
+        function cikar() {
+            value=parseInt(countertext.innerText);
+            countertext.innerText=value-1
+            if (countertext.innerText<0) {
+                countertext.style.color="red";
+          
+        }                        
+            
+        }
+        function ekle() {
+            value=parseInt(countertext.innerText);
+          
+            if (countertext.innerText>=10) {
+           alert("Sınır Aşıldı!!")
+                                      }
+                                      
+           else{
+            countertext.innerText=value+1
+              }
+              if (countertext.innerText>=0) {
+                countertext.style.color="green";
+                                      }
+          
+            
+        }
+      
+      
+              
+    </script>
+</body>
+</html>
